@@ -35,9 +35,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
             `,
           }}
         />
-        {/* hCaptcha */}
+        {/* Web3Forms hCaptcha */}
         <script
-          src="https://js.hcaptcha.com/1/api.js"
+          src="https://web3forms.com/client/script.js"
           async
           defer
         ></script>

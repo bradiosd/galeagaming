@@ -336,7 +336,7 @@ export default function BecomeAnAffiliate() {
                 </div>
               )}
 
-              <div className="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"></div>
+              <div className="h-captcha" data-captcha="true"></div>
 
               <Button type="submit" className="w-full" disabled={isSubmitting}>
                 {isSubmitting ? "Submitting..." : "Submit Application"}

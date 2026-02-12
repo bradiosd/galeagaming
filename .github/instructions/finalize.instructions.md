@@ -1,3 +1,7 @@
+---
+applyTo: '**/*'
+---
+
 # Finalization Rules
 
 ## Validate the build after doing work
