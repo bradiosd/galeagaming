@@ -28,7 +28,7 @@ export default function Footer() {
               </svg>
             </a>
             <a 
-              href="https://tiktok.com/@galeagaming" 
+              href="https://tiktok.com/@galeagamingofficial" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-link"
