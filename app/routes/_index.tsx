@@ -21,7 +21,7 @@ export default function Index() {
     
     const form = e.currentTarget;
     const formData = new FormData(form);
-    formData.append("access_key", "6154f426-a671-4805-885d-8d637ef7d79b");
+    formData.append("access_key", "d983188e-06ea-4664-9dbd-a34925eca72a");
     formData.append("subject", "Waitlist Signup - Galea Gaming");
     formData.append("from_name", "Galea Gaming Waitlist");
 
@@ -64,20 +64,23 @@ export default function Index() {
               <div className="success-message">Thank you for joining our waitlist!</div>
             )}
             
-            <form onSubmit={handleSubmit} className="waitlist-form">
-              <input type="hidden" name="redirect" value="https://galeagaming.com" />
-              <input type="hidden" name="to" value="support@galeagaming.com" />
-              <Input
-                type="email"
-                name="email"
-                required
-                placeholder="Your email address"
-                className="waitlist-input"
-              />
-              <Button type="submit" className="waitlist-button" disabled={isSubmitting}>
-                {isSubmitting ? "Joining..." : "Join"}
-              </Button>
-            </form>
+            {!showSuccess && (
+              <form onSubmit={handleSubmit} className="waitlist-form">
+                <input type="hidden" name="redirect" value="https://galeagaming.com" />
+                <input type="hidden" name="to" value="support@galeagaming.com" />
+                <Input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Your email address"
+                  className="waitlist-input"
+                />
+                <div className="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"></div>
+                <Button type="submit" className="waitlist-button" disabled={isSubmitting}>
+                  {isSubmitting ? "Joining..." : "Join"}
+                </Button>
+              </form>
+            )}
           </div>
         </div>
       </div>

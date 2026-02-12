@@ -750,3 +750,14 @@ body {
   height: 40px;
   transition: all 0.3s;
 }
+
+/* hCaptcha Styles */
+.h-captcha {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.waitlist-form .h-captcha {
+  margin: 1rem 0;
+}

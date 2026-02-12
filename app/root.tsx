@@ -35,6 +35,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
             `,
           }}
         />
+        {/* hCaptcha */}
+        <script
+          src="https://js.hcaptcha.com/1/api.js"
+          async
+          defer
+        ></script>
       </head>
       <body>
         {children}

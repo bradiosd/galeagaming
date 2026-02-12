@@ -37,7 +37,7 @@ export default function BecomeAnAffiliate() {
     
     const form = e.currentTarget;
     const formData = new FormData(form);
-    formData.append("access_key", "6154f426-a671-4805-885d-8d637ef7d79b");
+    formData.append("access_key", "53b5e791-e6d4-4834-823c-a31406345d91");
     formData.append("subject", "Affiliate Application - Galea Gaming");
     formData.append("from_name", "Galea Gaming Affiliates");
 
@@ -86,9 +86,10 @@ export default function BecomeAnAffiliate() {
               <div className="success-message">Thank you for your affiliate application! We'll review it and get back to you soon.</div>
             )}
             
-            <form onSubmit={handleSubmit} className="affiliate-form">
-              <input type="hidden" name="redirect" value="https://galeagaming.com/become-an-affiliate" />
-              <input type="hidden" name="to" value="support@galeagaming.com" />
+            {!showSuccess && (
+              <form onSubmit={handleSubmit} className="affiliate-form">
+                <input type="hidden" name="redirect" value="https://galeagaming.com/become-an-affiliate" />
+                <input type="hidden" name="to" value="support@galeagaming.com" />
               
               <div className="form-group">
                 <Label htmlFor="affiliate-email">Email Address *</Label>
@@ -328,10 +329,13 @@ export default function BecomeAnAffiliate() {
                 </div>
               )}
 
+              <div className="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"></div>
+
               <Button type="submit" className="w-full" disabled={isSubmitting}>
                 {isSubmitting ? "Submitting..." : "Submit Application"}
               </Button>
             </form>
+            )}
           </div>
         </div>
       </div>
