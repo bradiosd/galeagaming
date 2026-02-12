@@ -36,6 +36,14 @@ export default function BecomeAnAffiliate() {
     e.preventDefault();
     
     const form = e.currentTarget;
+    
+    // Client-side validation for hCaptcha (per Web3Forms docs)
+    const hCaptchaResponse = form.querySelector('textarea[name="h-captcha-response"]') as HTMLTextAreaElement;
+    if (!hCaptchaResponse || !hCaptchaResponse.value) {
+      alert("Please complete the captcha verification");
+      return;
+    }
+    
     const formData = new FormData(form);
     formData.append("access_key", "53b5e791-e6d4-4834-823c-a31406345d91");
     formData.append("subject", "Affiliate Application - Galea Gaming");
