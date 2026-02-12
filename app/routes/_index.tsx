@@ -38,7 +38,6 @@ export default function Index() {
       if (response.ok) {
         setShowSuccess(true);
         form.reset();
-        setTimeout(() => setShowSuccess(false), 5000);
       } else {
         alert("Error: " + data.message);
       }

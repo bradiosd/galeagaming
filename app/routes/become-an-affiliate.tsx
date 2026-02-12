@@ -60,7 +60,6 @@ export default function BecomeAnAffiliate() {
           tiktok: false,
           youtube: false,
         });
-        setTimeout(() => setShowSuccess(false), 5000);
       } else {
         alert("Error: " + data.message);
       }
